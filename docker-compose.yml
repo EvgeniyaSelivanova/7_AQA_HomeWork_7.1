@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  postgresql_service:
+    image: postgres:12-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=app_postgresql
+      - POSTGRES_USER=my_first_container_postgresql
+      - POSTGRES_PASSWORD=my_first_container_postgresql
